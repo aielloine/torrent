@@ -1,5 +1,4 @@
 <?php
-<?php
 //########  add Video language	  ########//
 if (!fk_taxonomies_exist("Video language	")) {
   $taxo_language = fk_taxonomies_add("Video language	", "language of the yggtorent video")->id();
