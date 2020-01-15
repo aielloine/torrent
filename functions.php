@@ -124,6 +124,7 @@ class Torrent
 
 
     public function gen_infos($title){
+      global $fk_urls, $fk_paths;
       $title = $this->cleanString($title);
       $title = strtolower($title);
       $explode_title = explode(' ', $title);
@@ -198,7 +199,7 @@ class Torrent
         $this->image = $tvdb_mg_src.$this->vrai_oeuvre->backdrop_path;
       }
       if ($this->image == $tvdb_mg_src) {
-        $this->image = "./img/default_movie.png";
+        $this->image = $fk_urls->file($fk_paths->plugin("torrent")."img/default_movie.png");
       }
       if ($this->name == null) {
         $this->name = $this->original_title;

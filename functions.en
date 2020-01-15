@@ -1,16 +1,21 @@
 <?php
 //########  add Video language	  ########//
-if (!fk_taxonomies_exist("Video language	")) {
+if (!fk_taxonomies_exist("Video language")) {
   $taxo_language = fk_taxonomies_add("Video language	", "language of the yggtorent video")->id();
   fk_terms_add($taxo_language,  array("multi", "vf2", "vff", "vf", "vfi", "vfq", "vo", "vostfr", "vosten", "truefrench", "french", "eng", "vof" ));
 }
 //########  add Video resolution	  ########//
-if (!fk_taxonomies_exist("Video resolution	")) {
+if (!fk_taxonomies_exist("Video resolution")) {
   $taxo_resolution = fk_taxonomies_add("Video resolution	", "resolution of the yggtorent video")->id();
   fk_terms_add($taxo_resolution, array("dvdrip", "dvd-rip", "bdrip", "bd-rip", "480p", "1280x720",  "720p", "1920x1080", "1080p", "3840x2160", "2160p", "1080", "brrip"));
 }
 //########  add Video audio	  ########//
-if (!fk_taxonomies_exist("Video audio	")) {
+if (!fk_taxonomies_exist("Video audio")) {
   $taxo_audio = fk_taxonomies_add("Video audio	", "audio of the yggtorent video")->id();
   fk_terms_add($taxo_audio, array("aac", "ac3", "mp3", "flac", "dolby",  "truehd", "atmos", "dts", "dts-hd", "dts-hdma", "ddp.5.1"));
+}
+//########  add Video type	  ########//
+if (!fk_taxonomies_exist("Video type")) {
+  $taxo_audio = fk_taxonomies_add("Video type", "type the yggtorent video")->id();
+  fk_terms_add($taxo_audio, array("movie", "person", "tv"));
 }
